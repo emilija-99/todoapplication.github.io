@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Today</h1>
+            <form action="" id = "todo-form">
+                <input type="text" name="task-name" placeholder="e.g. Buy Groceries" autofocus>
+                <button id="add-task">ADD TASK</button>
+            </form>
+            
+        </div>
+    </header>
+    <section id = "section">
+        <div class="container" id = "main-content"> 
+            <ul class="status">
+                <li>
+                    <span id="name-of-taks">Remainig</span>
+                    <span id="remaining-task" class="status-of-task">0</span>
+                </li>
+                <li>
+                    <span>Completed</span>
+                    <span id="completed-task" class="status-of-task">0</span>
+                </li>
+                <li>
+                    <span>Total</span>
+                    <span id="total-task" class="status-of-task">0</span>
+                </li>
+            </ul>
+
+            <ul id="todos">
+                
+
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <small>Design by Emilija, Code by +Tutos</small>
+        </div>
+    </footer>
+    <script src="func.js"></script>
+</body>
+</html>

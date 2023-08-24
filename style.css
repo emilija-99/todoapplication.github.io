@@ -1,0 +1,199 @@
+:root{
+    --color-backgroud: #CBC5EA;
+    --color-dark-purple: #73628A;
+    --color-dark-blue: #313D5A;
+    --color-white: #EAEAEA;
+    --color-black: #29262D;
+}
+@font-face {
+    font-family: sans-serif;
+    src: url(Google_fonts/JosefinSans-Bold.ttf);
+}
+.main-header{
+    margin: 0;
+    display: block;
+}
+h1{
+    color: #313D5A;
+    font-size: 24px;
+}
+header .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 36px;
+    background-color: var(--color-backgroud);
+    font-style: url(Google_fonts/JosefinSans-Bold.ttf);
+    font-weight: 500;
+    font-size: 14px;
+}
+#todo-form input{
+    width: 20%;
+    height: 24px;
+    border-radius: 8px;
+    border: none;
+    text-align: justify;
+    padding-left: 10px;
+    background-color: #BEADD4;
+    background-blend-mode: lighten;
+}
+
+#todo-form input:focus{
+    border: 1px solid #313D5A;
+    background-color: #EAEAEA;
+}
+#todo-form button{
+    width: 8%;
+    height: 24px;
+    padding: 4px 4px 4px;
+    margin-left: 4px;
+    background-color: #73628A;
+    color: #EAEAEA;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    font-size: 12px;
+}
+#add-task:hover{
+    color: #73628A;
+    background-color: #EAEAEA;
+    border: 2px solid #73628A;
+}
+section{
+    background-color: #EAEAEA;
+    margin: 0;
+    padding: 36px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.status{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    text-align: center;
+    align-content: center;
+    margin: 0;
+    padding-bottom: 8px;
+}
+
+.status li{
+    display: inline;
+    margin: 0;
+}
+.status li span{
+    background-color: #29262D;
+    color: #EAEAEA;
+    padding: 6px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+.status li .status-of-task{
+    background-color: #BEADD4;
+    color: #EAEAEA;
+    padding: 6px;
+    margin-left: -6px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+#todos li div{
+    background-color: #BEADD4;
+    padding: 16px 32px 16px 32px;
+    border-radius: 8px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    
+}
+#todos li{
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+}
+#todos li div span{
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+#todos li button{
+    border: 0;
+    padding: .25rem;
+    display: grid;
+    place-content: center;
+    background-color: transparent;
+    position: absolute;
+    left: 710px;
+    margin-top: -40px;
+    
+}
+#todos li button img{
+    width: 1.25rem;
+    height: 1.25rem;
+}
+#todos li button svg path{
+    transition: 2s ease;
+}
+
+#todos li button:hover svg path{
+    stroke: var(--color-dark-purple);
+}
+
+#todos li{
+    display: block;
+    width: 100%;
+}
+input[type='checkbox']{
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid var(--color-backgroud);
+    border: 100%;
+    display: grid;
+    place-content: center;
+    
+}
+input[type='checkbox']::before{
+    content: url(Images/icons8-check-24.svg);
+    transform: scale(0);
+    transition: 1s ease;
+    
+}
+input[type='checkbox']:checked{
+    background-color: #73628A;
+    border-color: #73628A;
+}
+input[type='checkbox']:checked::before{
+    transform: scale(1);
+}
+button,
+label {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+footer{
+    background-color: #EAEAEA;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    color: #313D5A;
+}
+
+
+
+
+
+
