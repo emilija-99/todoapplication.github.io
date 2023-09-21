@@ -63,10 +63,11 @@ function createTask(task){
     <div id="container-task">
     <input type="checkbox" class="checkboxs" name="tasks" id="${task.id}" ${task.isCompleted ? 'checked': ''}>
     <span ${!task.isCompleted ? 'contenteditable' : ''}>${task.name}</span>
-    </div>
-    <button title="Remove the "${task.name}" task" class="remove-task">
+    <button title="Remove the '${task.name}' task" class="remove-task">
         <img width="25" height="25" src="https://img.icons8.com/sf-ultralight/25/000000/filled-trash.png" alt="filled-trash"/>
-    </button>`
+    </button>
+    </div>`
+    
 
     taskEl.innerHTML = taskElMarkup
 

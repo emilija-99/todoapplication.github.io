@@ -1,64 +1,73 @@
 :root{
-    --color-backgroud: #CBC5EA;
-    --color-dark-purple: #73628A;
-    --color-dark-blue: #313D5A;
-    --color-white: #EAEAEA;
-    --color-black: #29262D;
+    
+    --color-green: #00C314;
+    --dark-color: #434E54;
+    --white-color: #EEF0F2;
+    --blue-color: #3C91E6; 
+    --red-color: #DC493A;
 }
 @font-face {
     font-family: sans-serif;
     src: url(Google_fonts/JosefinSans-Bold.ttf);
+}
+body{
+    margin: 0;
+    background-color: var(--color-white);
 }
 .main-header{
     margin: 0;
     display: block;
 }
 h1{
-    color: #313D5A;
-    font-size: 24px;
+    color: var(--white-color);
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing:3px;
 }
 header .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 36px;
-    background-color: var(--color-backgroud);
+    padding: 48px;
+    background-color: var(--dark-color);
     font-style: url(Google_fonts/JosefinSans-Bold.ttf);
     font-weight: 500;
     font-size: 14px;
 }
 #todo-form input{
-    width: 20%;
+    width: 25%;
     height: 24px;
     border-radius: 8px;
-    border: none;
+    border: 1px solid var(--white-color);
     text-align: justify;
-    padding-left: 10px;
-    background-color: #BEADD4;
-    background-blend-mode: lighten;
+    padding-left:10px;
+    background-color: var(--white-color);
 }
 
-#todo-form input:focus{
-    border: 1px solid #313D5A;
-    background-color: #EAEAEA;
+#todo-form input:focus-visible{
+    color: #434E54;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgb(204, 219, 232) 0 -3px 0 0 inset;
+    border: none;
+    outline: none;
+    
 }
+
 #todo-form button{
-    width: 8%;
-    height: 24px;
-    padding: 4px 4px 4px;
+    width: 7%;
+    height: 32px;
+    padding: 4px 4px 4px 0;
     margin-left: 4px;
-    background-color: #73628A;
+    background-color: var(--blue-color);
     color: #EAEAEA;
     border-radius: 8px;
-    border: none;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 11px;
 }
 #add-task:hover{
-    color: #73628A;
+    color: var(--dark-color);
     background-color: #EAEAEA;
-    border: 2px solid #73628A;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, var(--dark-color) 0 -3px 0 0 inset;
 }
 section{
     background-color: #EAEAEA;
@@ -72,31 +81,33 @@ section{
 .status{
     display: flex;
     justify-content: space-between;
-    width: 300px;
+    width: 360px;
     text-align: center;
     align-content: center;
-    margin: 0;
-    padding-bottom: 8px;
+    margin: 20px;
+    padding-bottom: 10px;
 }
 
 .status li{
     display: inline;
     margin: 0;
+    
 }
 .status li span{
     background-color: #29262D;
     color: #EAEAEA;
-    padding: 6px 8px;
+    padding: 8px 8px;
     border-radius: 8px;
     font-size: 12px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-
+    font-size: 13px;
+    letter-spacing: 1px;
 }
 .status li .status-of-task{
-    background-color: #BEADD4;
+    background-color: var(--blue-color);
     color: #EAEAEA;
-    padding: 6px;
+    padding: 8px;
     margin-left: -6px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -104,37 +115,34 @@ section{
     border-bottom-right-radius: 8px;
 }
 
-
 #todos li div{
-    background-color: #BEADD4;
+    background-color: var(--dark-color);
     padding: 16px 32px 16px 32px;
     border-radius: 8px;
     margin: 0px;
     display: flex;
     align-items: center;
-    
+    color: var(--white-color);
+    font-size: 16px;
 }
 #todos li{
     margin-top: 16px;
     display: flex;
     align-items: center;
+    color: var(--white-color);
+    
 }
 #todos li div span{
     flex-grow: 1;
-    margin-left: 10px;
+    margin-left: 30px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+#todos li div span:focus{
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
-#todos li button{
-    border: 0;
-    padding: .25rem;
-    display: grid;
-    place-content: center;
-    background-color: transparent;
-    position: absolute;
-    left: 710px;
-    margin-top: -40px;
-    
-}
+
 #todos li button img{
     width: 1.25rem;
     height: 1.25rem;
@@ -157,7 +165,7 @@ input[type='checkbox']{
     margin: 0;
     width: 1.2rem;
     height: 1.2rem;
-    border: 2px solid var(--color-backgroud);
+    border: 2px solid var(--white-color);
     border: 100%;
     display: grid;
     place-content: center;
@@ -166,19 +174,30 @@ input[type='checkbox']{
 input[type='checkbox']::before{
     content: url(Images/icons8-check-24.svg);
     transform: scale(0);
-    transition: 1s ease;
+    transition: 0.7s ease;
     
 }
 input[type='checkbox']:checked{
-    background-color: #73628A;
-    border-color: #73628A;
+    background-color: #3C91E6;
+    border-color: #EEF0F2;
 }
 input[type='checkbox']:checked::before{
-    transform: scale(1);
+    transform: scale(0.6);
 }
 button,
 label {
   cursor: pointer;
+}
+#todos li button{
+    border: 0;    
+    padding: .15rem;    
+    display: grid;    
+    place-content: center;    
+    align-content: center;    
+    justify-content: end;    
+    align-items: center;    
+    justify-items: center;
+    border-radius: 8px;
 }
 
 li {
